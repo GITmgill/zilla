@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Hi</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+	<header>
+		<div class="grid clear">
+			<div class="rwd me">
+				<%= image_tag("me.jpg") %>
+			</div>
+			<div class="rwd hero">
+				<h1>Mark Gill</h1>
+				<ul>
+					<li>
+						<a href="#"><i class="fa fa-twitter"></i> @mGillzilla</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-dribbble"></i> /mGillzilla</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-github-alt"></i> GITmgill</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="rwd navigation">
+		<div class="grid clear">
+			<nav>
+				<ul>
+					<li>
+						<a href="#" class="active">Work</a>
+					</li>
+					<li>
+						<a href="#">About Me</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="grid clear">

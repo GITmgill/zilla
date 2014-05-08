@@ -1,0 +1,12 @@
+//colors
+$black: #222;
+$white: #fff;
+$oj: #c33200;
+// variables
+@include establish-baseline;
+// mixins
+@mixin clearblock {
+	display:block;
+	clear:none;
+}
+//stuff

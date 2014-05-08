@@ -1,0 +1,45 @@
+body {
+	background-color:$white - 10;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5 {
+	line-height:1em;
+	font-family: 'Oswald', sans-serif;
+}
+h1 {
+	@include adjust-font-size-to(26px);	
+}
+h2 {
+	@include adjust-font-size-to(20px);
+}
+h3 {
+	@include adjust-font-size-to(18px);
+}
+h4 {
+	
+}
+h5 {
+	
+}
+a {
+	text-decoration:none;
+}
+a:visited {
+	
+}
+p {
+	@include adjust-font-size-to(16px);
+	line-height:1.4em;
+}
+li {
+	
+}
+input {
+	
+}
+strong {
+	
+}
+small {
+	font-size:.6em;
+}
