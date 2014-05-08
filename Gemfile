@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -15,8 +12,27 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+gem 'sqlite3', '1.3.8'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#Use Postgressql for heroku
+# gem 'pg'
+# gem 'rails_12factor', '0.0.2'
+
+group :test do
+	gem 'selenium-webdriver', '2.35.1'
+	gem 'capybara', '2.1.0'
+end
+
+# Markdown interpreter
+gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
+
+#paperclip image uploader
+gem "paperclip", "~> 3.5.3"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
