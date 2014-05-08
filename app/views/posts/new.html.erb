@@ -1,0 +1,30 @@
+<%= form_for @post, :html => { :multipart => true } do |f| %>
+  <ul>
+    <li>
+      <%= f.text_field :title, :placeholder => "Title" %>
+    </li>
+
+    <li>
+      <%= f.text_field :author, :placeholder => "Author" %>
+    </li>
+
+    <li>
+      <%= f.text_area :short, :placeholder => "First Paragraph" %>
+    </li>
+
+    <li>
+      <%= f.text_area :text, :placeholder => "Write your blog here", :class => "common", :id => "comments" %>
+    </li>
+    <li>
+      <%= label_tag 'photo', 'Add Photo <i class="fa fa-camera-retro"></i>'.html_safe %>
+      <%= f.file_field :photo %>
+    </li>
+    <li>
+      <%= label_tag 'state', 'Visibilty Options <i class="fa fa-eye"></i>'.html_safe %>
+      <%= f.select(:state, options_for_select([['Draft', 'draft'],['Publish', 'published']])) %>
+    </li>
+    <li>
+      <%= f.submit %>
+    </li>
+  </ul>
+<% end %>
