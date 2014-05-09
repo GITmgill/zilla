@@ -4,9 +4,6 @@
       <%= f.text_field :title, :placeholder => "Title" %>
     </li>
 
-    <li>
-      <%= f.text_field :author, :placeholder => "Author" %>
-    </li>
     <% if !@post.photo.blank? %>
     <li>
       <%= image_tag @post.photo %>

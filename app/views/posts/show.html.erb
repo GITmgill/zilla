@@ -1,0 +1,55 @@
+        <article>
+          <hgroup>
+            <h2><%= @post.title %></h2>
+            <div class="date"><%= @post.created_at.strftime('%b, %d') %></div>
+          </hgroup>
+          <% if !@post.photo.blank? %>
+          <%= image_tag @post.photo.url %>
+          <% end %>
+          <p><%= markdown @post.short %></p>
+          <p><%= markdown @post.text %></p>
+        </article>
+        <% @post.comments.each do |comment| %>
+            <% if comment.flag == true || current_user  %>
+            <p>
+              <strong><%= comment.commenter %></strong>
+            </p>   
+            <p>
+              <%= comment.body %>
+            </p>
+            <% end %>
+            <% if current_user %>
+              <% if comment.flag == false %>
+              <p class="new">New Comment! <i class="fa fa-comments-o"></i></p><br/>
+              <i class="fa fa-check-circle"></i> <%= link_to 'Approve', edit_post_comment_path(@post,comment)  %>
+              <% end %>
+              <i class="fa fa-times-circle"></i> <%= link_to 'Delete', [comment.post, comment],
+                                                            method: :delete,
+                                                            data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        <% end %>
+
+
+
+
+<script>
+  var txt = $('#comments'),
+      hiddenDiv = $(document.createElement('div')),
+      content = null;
+
+  txt.addClass('txtstuff');
+  hiddenDiv.addClass('hiddendiv common');
+
+  $('body').append(hiddenDiv);
+
+  txt.on('keyup', function () {
+
+      content = $(this).val();
+
+      content = content.replace(/\n/g, '<br>');
+      hiddenDiv.html(content + '<br class="lbr">');
+
+      $(this).css('height', hiddenDiv.height());
+
+  });
+</script>

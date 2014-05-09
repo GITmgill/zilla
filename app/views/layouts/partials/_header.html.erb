@@ -35,11 +35,22 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="#" class="active">Work</a>
+						<%= link_to "Blog", posts_path %>
+					</li>
+					<li>
+						<a href="#">Work</a>
 					</li>
 					<li>
 						<a href="#">About Me</a>
 					</li>
+					<% if current_user %>
+					<li>
+						<%= link_to "Dashboard", dashboard_path %>
+					</li>
+					<li>
+						<%= link_to "Logout", logout_path %>
+					</li>
+					<% end %>
 				</ul>
 			</nav>
 		</div>

@@ -1,0 +1,22 @@
+.dashboard {
+	a {
+		color:$oj;
+	}
+	a:visited {
+		color:$oj;
+	}
+	ul {
+		li {
+			margin:20px 0;
+			a {
+				color:$oj;
+			}
+			a:visited {
+				color:$oj;
+			}
+			i {
+				margin:0 10px;
+			}
+		}
+	}
+}

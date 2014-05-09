@@ -100,11 +100,7 @@ header {
 	}
 }
 .work {
-	padding:40px 0;
-	width:100%;
-	@include clearblock;
-	text-align:center;
-	img {
-		width:22%;
-	}
+	width:50%;
+	margin-left:25%;
+	margin-top:50px;
 }

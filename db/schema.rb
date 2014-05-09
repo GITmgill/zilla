@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140508144932) do
     t.string   "commenter"
     t.text     "body"
     t.integer  "post_id"
+    t.boolean  "flag",       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

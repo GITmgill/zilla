@@ -1,0 +1,30 @@
+.work {
+	article {
+		margin:10px 0;
+		padding:30px 0;
+		border-bottom:1px solid $white - 25;
+		@include box-shadow(0px 1px 0px $white);
+		.date {
+			background-color:#a8c171;
+			padding:2px;
+			color:$white;
+			text-align:right;
+			padding-right:10px;
+		}
+		h2 {
+			@include adjust-font-size-to(24px);
+		}
+		p {
+			display:block;
+			margin:20px 0;
+			@include adjust-font-size-to(18px);
+			line-height:1.6em;
+		}
+		a {
+			color:$oj;
+		}
+		a:visited {
+			color:$oj + 10;
+		}
+	}
+}

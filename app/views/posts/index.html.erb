@@ -1,0 +1,17 @@
+<% @posts.each do |post| %>
+    <article>
+      <hgroup>
+        <h2><%= link_to post.title, post %></h2>
+        <div class="date"><%= post.created_at.strftime('%b, %d') %></div>
+      </hgroup>
+      <% if !post.photo.blank? %>
+        <%= image_tag post.photo.url %>
+      <% end %>
+      <p>
+        <%= markdown(post.short) %>
+      </p>
+      <div>
+        <%= link_to 'Read More', post %>
+      </div>
+    </article>
+<% end %>

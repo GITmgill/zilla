@@ -1,0 +1,34 @@
+<div class="dashboard">
+	<h3>Manage Posts</h3>
+	<ul>
+	<% @posts.each do |post| %>
+
+	<li>			| <%= post.id %> | 
+	<%= link_to post.title, post %>, 
+	<%= post.created_at.strftime('%b, %d') %> - 
+	<%= post.state %>
+
+	<i class="fa fa-pencil-square-o"></i><%= link_to 'Edit', edit_post_path(post) %>
+	<i class="fa fa-times-circle"></i><%= link_to 'Delete', post_path(post),
+	method: :delete, data: { confirm: 'Are you sure?' } %>
+	</li>
+	<% end %>
+	</ul>
+	<h3>Manage Comments</h3>
+	<ul>
+	<% if !@comments.exists? %>
+	<li>
+	No New Comments
+	</li>
+	<% end %>
+	<% @comments.each do |comment| %>
+	<li>
+	| <%= comment.post_id %> | 
+	<%= link_to comment.commenter, comment.post %> writes 
+	<%= link_to comment.body, comment.post %>
+	</li>
+	<% end %>
+	</ul>
+	<h3>Create New</h3>
+	<%= link_to 'New Post', new_post_path %>
+</div>
