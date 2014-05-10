@@ -1,26 +1,49 @@
-<%= form_for @post, :html => { :multipart => true } do |f| %>
-  <ul>
-    <li>
-      <%= f.text_field :title, :placeholder => "Title" %>
-    </li>
+<div class="rwd new-post">
+  <%= form_for @post, :html => { :multipart => true } do |f| %>
+    <ul>
+      <li>
+        <%= f.text_field :title, :placeholder => "Title" %>
+      </li>
 
-    <li>
-      <%= f.text_area :short, :placeholder => "First Paragraph" %>
-    </li>
+      <li>
+        <%= f.text_area :short, :placeholder => "First Paragraph" %>
+      </li>
 
-    <li>
-      <%= f.text_area :text, :placeholder => "Write your blog here", :class => "common", :id => "comments" %>
-    </li>
-    <li>
-      <%= label_tag 'photo', 'Add Photo <i class="fa fa-camera-retro"></i>'.html_safe %>
-      <%= f.file_field :photo %>
-    </li>
-    <li>
-      <%= label_tag 'state', 'Visibilty Options <i class="fa fa-eye"></i>'.html_safe %>
-      <%= f.select(:state, options_for_select([['Draft', 'draft'],['Publish', 'published']])) %>
-    </li>
-    <li>
-      <%= f.submit %>
-    </li>
-  </ul>
-<% end %>
+      <li>
+        <%= f.text_area :text, :placeholder => "Write your blog here", :class => "common", :id => "post" %>
+      </li>
+      <li>
+        <%= label_tag 'photo', 'Add Photo <i class="fa fa-camera-retro"></i>'.html_safe %>
+        <%= f.file_field :photo %>
+      </li>
+      <li>
+        <%= label_tag 'state', 'Visibilty Options <i class="fa fa-eye"></i>'.html_safe %>
+        <%= f.select(:state, options_for_select([['Draft', 'draft'],['Publish', 'published']])) %>
+      </li>
+      <li>
+        <%= f.submit %>
+      </li>
+    </ul>
+  <% end %>
+</div>
+<script>
+  var txt = $('#post'),
+      hiddenDiv = $(document.createElement('div')),
+      content = null;
+
+  txt.addClass('txtstuff');
+  hiddenDiv.addClass('hiddendiv common');
+
+  $('body').append(hiddenDiv);
+
+  txt.on('keyup', function () {
+
+      content = $(this).val();
+
+      content = content.replace(/\n/g, '<br>');
+      hiddenDiv.html(content + '<br class="lbr">');
+
+      $(this).css('height', hiddenDiv.height());
+
+  });
+</script>

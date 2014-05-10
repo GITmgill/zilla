@@ -1,8 +1,7 @@
 <% @posts.each do |post| %>
     <article>
       <hgroup>
-        <h2><%= link_to post.title, post %></h2>
-        <div class="date"><%= post.created_at.strftime('%b, %d') %></div>
+        <h2><%= link_to post.title, post %> <small><%= post.created_at.strftime('%b, %d') %></small></h2>
       </hgroup>
       <% if !post.photo.blank? %>
         <%= image_tag post.photo.url %>

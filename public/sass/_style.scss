@@ -9,4 +9,7 @@ $oj: #c33200;
 	display:block;
 	clear:none;
 }
+@mixin trans {
+	@include transition(.3s);
+}
 //stuff

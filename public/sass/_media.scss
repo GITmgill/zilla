@@ -41,9 +41,412 @@ header {
 		padding:5px;
 		background-color:$white;
 		@include clearblock;
+		width:33%;
+		margin-left:33%;
+		margin-top:10px;
+		@include border-radius(4px);
+		@include box-shadow(0px 2px 3px rgba(0,0,0,.3));
+	}
+	.hero {
+		width:100%;
+		margin-left:0%;
+		@include clearblock;
+		margin-top:5px;
+		text-align:center;
+		ul {
+			li {
+				display:inline-block;
+				a {
+					color:$white;
+					padding:10px;
+				}
+				a:visited {
+					color:$white;
+				}
+			}
+		}
+	}
+}
+.navigation {
+	border-bottom:1px solid $white - 25;
+	@include box-shadow(0px 1px 0px $white);
+	position:relative;
+	z-index:1;
+	background-color:$white;
+	nav {
+		padding:10px 0;
+		ul {
+			width:100%;
+			text-align:center;
+		}
+		li {
+			display:inline-block;
+			a {
+				color:$black;
+				padding:10px;
+				text-align:center;
+			}
+			a:visited {
+				color:$black;
+			}
+			.active {
+				border-bottom:4px solid $oj;
+			}
+		}
+	}
+}
+.work {
+	width:95%;
+	margin-top:50px;
+}
+@media only screen and (min-width: 481px) {
+.grid {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+padding-left: 1.5166%;
+padding-right: 1.5166%;
+max-width:1455px;
+clear: none;
+float: none;
+}
+header {
+	padding:10px;
+	background-color:$oj;
+	.me {
+		padding:5px;
+		background-color:$white;
+		@include clearblock;
+		width:33%;
+		margin-left:33%;
+		margin-top:10px;
+		@include border-radius(4px);
+		@include box-shadow(0px 2px 3px rgba(0,0,0,.3));
+	}
+	.hero {
+		width:100%;
+		margin-left:0%;
+		@include clearblock;
+		margin-top:5px;
+		text-align:center;
+		ul {
+			li {
+				display:inline-block;
+				a {
+					color:$white;
+					padding:10px;
+				}
+				a:visited {
+					color:$white;
+				}
+			}
+		}
+	}
+}
+.navigation {
+	border-bottom:1px solid $white - 25;
+	@include box-shadow(0px 1px 0px $white);
+	position:relative;
+	z-index:1;
+	background-color:$white;
+	nav {
+		padding:10px 0;
+		ul {
+			width:100%;
+			text-align:center;
+		}
+		li {
+			display:inline-block;
+			a {
+				color:$black;
+				padding:10px;
+				text-align:center;
+			}
+			a:visited {
+				color:$black;
+			}
+			.active {
+				border-bottom:4px solid $oj;
+			}
+		}
+	}
+}
+.work {
+	width:95%;
+	margin-top:50px;
+}
+}
+@media only screen and (min-width: 600px) {
+.grid {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+padding-left: 1.5166%;
+padding-right: 1.5166%;
+max-width:1455px;
+clear: none;
+float: none;
+}
+header {
+	padding:10px;
+	background-color:$oj;
+	.me {
+		padding:5px;
+		background-color:$white;
+		@include clearblock;
+		width:30%;
+		margin-top:100px;
+		margin-bottom:-150px;
+		margin-left:0%;
+		@include border-radius(4px);
+		@include box-shadow(0px 2px 3px rgba(0,0,0,.3));
+		position:relative;
+		z-index:2;
+	}
+	.hero {
+		width:65%;
+		margin-left:1%;
+		@include clearblock;
+		margin-top:160px;
+		text-align:left;
+		h1 {
+			padding-left:10px;
+		}
+		ul {
+			li {
+				display:inline-block;
+				a {
+					color:$white;
+					padding:10px;
+				}
+				a:visited {
+					color:$white;
+				}
+			}
+		}
+	}
+}
+.navigation {
+	border-bottom:1px solid $white - 25;
+	@include box-shadow(0px 1px 0px $white);
+	position:relative;
+	z-index:1;
+	background-color:$white;
+	nav {
+		padding:10px 0;
+		ul {
+			width:100%;
+			text-align:right;
+		}
+		li {
+			display:inline-block;
+			a {
+				color:$black;
+				padding:10px;
+				text-align:center;
+			}
+			a:visited {
+				color:$black;
+			}
+			.active {
+				border-bottom:4px solid $oj;
+			}
+		}
+	}
+}
+.work {
+	width:95%;
+	margin-top:50px;
+}
+}
+@media only screen and (min-width: 750px) {
+.grid {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+padding-left: 1.5166%;
+padding-right: 1.5166%;
+max-width:1455px;
+clear: none;
+float: none;
+}
+header {
+	padding:10px;
+	background-color:$oj;
+	.me {
+		padding:5px;
+		background-color:$white;
+		@include clearblock;
+		width:30%;
+		margin-top:30px;
+		margin-bottom:-150px;
+		margin-left:0%;
+		@include border-radius(4px);
+		@include box-shadow(0px 2px 3px rgba(0,0,0,.3));
+		position:relative;
+		z-index:2;
+	}
+	.hero {
+		width:65%;
+		margin-left:1%;
+		@include clearblock;
+		margin-top:160px;
+		text-align:left;
+		h1 {
+			padding-left:10px;
+		}
+		ul {
+			li {
+				display:inline-block;
+				a {
+					color:$white;
+					padding:10px;
+				}
+				a:visited {
+					color:$white;
+				}
+			}
+		}
+	}
+}
+.navigation {
+	border-bottom:1px solid $white - 25;
+	@include box-shadow(0px 1px 0px $white);
+	position:relative;
+	z-index:1;
+	background-color:$white;
+	nav {
+		padding:10px 0;
+		ul {
+			width:100%;
+			text-align:right;
+		}
+		li {
+			display:inline-block;
+			a {
+				color:$black;
+				padding:10px;
+				text-align:center;
+			}
+			a:visited {
+				color:$black;
+			}
+			.active {
+				border-bottom:4px solid $oj;
+			}
+		}
+	}
+}
+.work {
+	width:95%;
+	margin-top:50px;
+}
+}
+@media only screen and (min-width: 900px) {
+.grid {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+padding-left: 1.5166%;
+padding-right: 1.5166%;
+max-width:1455px;
+clear: none;
+float: none;
+}
+header {
+	padding:10px;
+	background-color:$oj;
+	.me {
+		padding:5px;
+		background-color:$white;
+		@include clearblock;
+		width:30%;
+		margin-top:30px;
+		margin-bottom:-80px;
+		margin-left:0%;
+		@include border-radius(4px);
+		@include box-shadow(0px 2px 3px rgba(0,0,0,.3));
+		position:relative;
+		z-index:2;
+	}
+	.hero {
+		width:65%;
+		margin-left:1%;
+		@include clearblock;
+		margin-top:160px;
+		text-align:left;
+		h1 {
+			padding-left:10px;
+		}
+		ul {
+			li {
+				display:inline-block;
+				a {
+					color:$white;
+					padding:10px;
+				}
+				a:visited {
+					color:$white;
+				}
+			}
+		}
+	}
+}
+.navigation {
+	border-bottom:1px solid $white - 25;
+	@include box-shadow(0px 1px 0px $white);
+	position:relative;
+	z-index:1;
+	background-color:$white;
+	nav {
+		padding:10px 0;
+		ul {
+			width:100%;
+			text-align:right;
+		}
+		li {
+			display:inline-block;
+			a {
+				color:$black;
+				padding:10px;
+				text-align:center;
+			}
+			a:visited {
+				color:$black;
+			}
+			.active {
+				border-bottom:4px solid $oj;
+			}
+		}
+	}
+}
+.work {
+	width:95%;
+	margin-top:50px;
+}
+}
+@media only screen and (min-width: 1100px) {
+.grid {
+margin-left: auto;
+margin-right: auto;
+width: 95%;
+padding-left: 1.5166%;
+padding-right: 1.5166%;
+max-width:1455px;
+clear: none;
+float: none;
+}
+header {
+	padding:10px;
+	background-color:$oj;
+	.me {
+		padding:5px;
+		background-color:$white;
+		@include clearblock;
 		width:20%;
 		margin-top:10px;
 		margin-bottom:-80px;
+		margin-left:0%;
 		@include border-radius(4px);
 		@include box-shadow(0px 2px 3px rgba(0,0,0,.3));
 		position:relative;
@@ -54,6 +457,7 @@ header {
 		margin-left:1%;
 		@include clearblock;
 		margin-top:160px;
+		text-align:left;
 		h1 {
 			padding-left:10px;
 		}
@@ -103,4 +507,5 @@ header {
 	width:50%;
 	margin-left:25%;
 	margin-top:50px;
+}
 }

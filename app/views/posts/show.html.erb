@@ -1,7 +1,6 @@
         <article>
           <hgroup>
-            <h2><%= @post.title %></h2>
-            <div class="date"><%= @post.created_at.strftime('%b, %d') %></div>
+            <h2><%= @post.title %> <small><%= @post.created_at.strftime('%b, %d') %></small></h2>
           </hgroup>
           <% if !@post.photo.blank? %>
           <%= image_tag @post.photo.url %>
